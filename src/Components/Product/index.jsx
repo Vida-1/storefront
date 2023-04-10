@@ -1,11 +1,12 @@
+import React from "react";
 import { useDispatch } from "react-redux";
-import "./product.css";
-import productSlice from "../../store/beast";
+// import "./product.css";
+import productSlice from "../../store/products";
 
 const Product = ({ product }) => {
   const dispatch = useDispatch();
   return (
-    <article className="Beast">
+    <article className="Product">
       <header
         style={{
           display: "flex",

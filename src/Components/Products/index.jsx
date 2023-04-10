@@ -1,4 +1,4 @@
-import "./products.css";
+import React from "react";
 import Product from "../Product";
 import { filteredProducts } from "../../store/product";
 import { useSelector } from "react-redux";

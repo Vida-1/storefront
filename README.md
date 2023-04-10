@@ -1,6 +1,6 @@
 # LAB - Class 36
 
-## Project: Electronics Storefront
+## Project: Storefront
 
 ### Author: Vida P.
 
@@ -43,4 +43,4 @@ npm install jwt-decode
 
 #### UML
 
-Link to an image of the UML for your application and response to events
+* ![lab36PageLayout](lab36LayoutAndComponentStructure.jpg)
