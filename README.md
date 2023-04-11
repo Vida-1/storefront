@@ -28,6 +28,7 @@ npm install supertest - lets you use some special part of jest to test your code
 npm install react-if;
 npm install has a <When></When> feature that allows for cleaner conditional rendering
 npm install jwt-decode
+npm install @reduxjs/toolkit
 
 #### How to initialize/run your application
 

@@ -1,0 +1,51 @@
+[
+  {
+    "product": "TV",
+    "category": "Electronics",
+    "categoryID": 1,
+    "price": 699.0,
+    "inStock": 5
+  },
+  {
+    "product": "Radio",
+    "category": "Electronics",
+    "categoryID": 1,
+    "price": 99.0,
+    "inStock": 15
+  },
+  {
+    "product": "Shirt",
+    "category": "Clothing",
+    "categoryID": 3,
+    "price": 9.0,
+    "inStock": 25
+  },
+  {
+    "product": "Socks",
+    "category": "Clothing",
+    "categoryID": 3,
+    "price": 12.0,
+    "inStock": 10
+  },
+  {
+    "product": "Apples",
+    "category": "Food",
+    "categoryID": 2,
+    "price": 0.99,
+    "inStock": 500
+  },
+  {
+    "product": "Eggs",
+    "category": "Food",
+    "categoryID": 2,
+    "price": 1.99,
+    "inStock": 12
+  },
+  {
+    "product": "Bread",
+    "category": "Food",
+    "categoryID": 2,
+    "price": 2.39,
+    "inStock": 90
+  }
+]
