@@ -11,15 +11,15 @@ const Category = () => {
         const category = e.target.value;
         dispatch(
           productSlice.actions.setCategory(
-            category === "" ? undefined : Number(category)
+            category === "" ? undefined : String(category)
           )
         );
       }}
     >
       <option value="">All</option>
-      <option value="1">electronics</option>
-      <option value="2">food</option>
-      <option value="3">clothing</option>
+      <option value="Electronics">Electronics</option>
+      <option value="Food">Food</option>
+      <option value="Clothing">Clothing</option>
     </select>
   );
 };
