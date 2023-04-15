@@ -1,5 +1,7 @@
+import React from "react";
+
 import { useDispatch } from "react-redux";
-import productSlice from "../../store/product";
+import productSlice from "../product";
 
 const Category = () => {
   const dispatch = useDispatch();
@@ -17,6 +19,7 @@ const Category = () => {
       <option value="">All</option>
       <option value="1">electronics</option>
       <option value="2">food</option>
+      <option value="3">clothing</option>
     </select>
   );
 };
