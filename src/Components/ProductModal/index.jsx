@@ -1,5 +1,7 @@
+import React from 'react';
 import { useDispatch, useSelector } from "react-redux";
 import productSlice from "../../store/product";
+import Button from "@mui/material/Button";
 
 const ProductModal = () => {
   const product = useSelector((state) => state.product.selectedProduct);
@@ -29,13 +31,14 @@ const ProductModal = () => {
           <p>{product?.description}</p>
         </main>
         <footer>
-          <button
+          <Button
+            variant="contained"
             onClick={() => {
               dispatch(productSlice.actions.showProduct(undefined));
             }}
           >
             Close
-          </button>
+          </Button>
         </footer>
       </article>
     </dialog>

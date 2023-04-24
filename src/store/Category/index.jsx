@@ -2,11 +2,13 @@ import React from "react";
 
 import { useDispatch } from "react-redux";
 import productSlice from "../product";
+import Select from "@mui/material/Select";
 
 const Category = () => {
   const dispatch = useDispatch();
   return (
-    <select
+    <Select
+      label="Category"
       onChange={(e) => {
         const category = e.target.value;
         dispatch(
@@ -20,7 +22,7 @@ const Category = () => {
       <option value="Electronics">Electronics</option>
       <option value="Food">Food</option>
       <option value="Clothing">Clothing</option>
-    </select>
+    </Select>
   );
 };
 

@@ -1,4 +1,4 @@
-section {
+/* section {
   display: grid;
   --columns: 1;
   grid-template-columns: repeat(var(--columns), 1fr);
@@ -28,4 +28,4 @@ section {
   section {
     --columns: 5;
   }
-}
+} */

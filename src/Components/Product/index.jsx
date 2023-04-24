@@ -1,5 +1,7 @@
 import { useDispatch } from "react-redux";
 import productSlice from "../../store/product";
+import React from 'react';
+import Button from '@mui/material/Button';
 
 const Product = ({ product }) => {
   const dispatch = useDispatch();
@@ -13,13 +15,13 @@ const Product = ({ product }) => {
         }}
       >
         <h2>{product.title}</h2>
-        <button
+        <Button variant="contained"
           onClick={() => {
             dispatch(productSlice.actions.showProduct(product));
           }}
         >
           Open
-        </button>
+        </Button>
       </header>
       <main>
         <figure>
