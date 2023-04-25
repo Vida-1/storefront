@@ -1,14 +1,19 @@
-import React from "react";
+import * as React from "react";
 
 import { useDispatch } from "react-redux";
 import productSlice from "../product";
-import Select from "@mui/material/Select";
+import { Select } from "@mui/material/Select";
 
 const Category = () => {
   const dispatch = useDispatch();
   return (
     <Select
-      label="Category"
+      defaultValue=""
+      placeholder="Category"
+      sx={{
+        width: 200,
+        height: 50,
+      }}
       onChange={(e) => {
         const category = e.target.value;
         dispatch(

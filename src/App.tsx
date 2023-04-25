@@ -10,9 +10,9 @@ function App() {
   return (
     <>
       <Header />
-      <Grid item xs={6} sm={8}>
+
         <Products />
-      </Grid>
+
       <Footer />
       <ProductModal />
     </>
