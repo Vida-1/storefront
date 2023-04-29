@@ -1,11 +1,11 @@
 import { useDispatch } from "react-redux";
-import productSlice from "../../store/products";
+import productSlice from "../../store/product";
 import React from "react";
 import Button from "@mui/material/Button";
 
 // Note: line 19 seems to be causing a bunch of eslint errors that seem related to the json file (things beingmissing in props validation)
 
-const Product = ({ product }) => {
+const Product = ({product}) => {
   const dispatch = useDispatch();
   return (
     <article className="Product">
@@ -28,7 +28,7 @@ const Product = ({ product }) => {
       </header>
       <main>
         <figure>
-          <img src={product.image_url} width="200px" alt={product.keyword} />
+          <img src={product.image_url} height={200} width={200} alt={product.keyword} />
         </figure>
         <p>{product.description}</p>
       </main>

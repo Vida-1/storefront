@@ -8,12 +8,11 @@ const Products = () => {
   const products = useSelector(filteredProducts);
   return (
     <Grid item md={4} xs={2}>
-      <Container columns={{ xs: 4, md: 6 }}>
+      <Container columns={{ xs: 4, md: 12 }} direction = 'row'>
         {products.map((product) => (
           <>
-            <Card md={{ maxWidth: 20 }}>
+            <Card variant ='outlined' sx={{ display: 'inline-block', margin: "1rem", maxHeight: '200', maxWidth: '200' }} >
               <CardContent>
-                <p>this is some text on a card</p>
                 <Product product={product} key={product.product} />
               </CardContent>
             </Card>

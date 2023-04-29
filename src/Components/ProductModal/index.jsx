@@ -24,7 +24,7 @@ const ProductModal = () => {
           <figure>
             <img
               src={product?.image_url}
-              width="400px"
+              width={350}
               alt={product?.keyword}
             />
           </figure>

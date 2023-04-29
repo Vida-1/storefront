@@ -17,7 +17,7 @@
     "inStock": 15,
     "image_url": "https://c.pxhere.com/photos/29/60/radio_receiver_radio_device_old_nostalgia_antique-1090999.jpg!d",
     "keyword": "radio",
-    "description": "This radio generates soothing, calm, lo-fi bliss"
+    "description": "This radio generates soothing, lo-fi bliss"
   },
   {
     "product": "Shirt",
@@ -27,7 +27,7 @@
     "inStock": 25,
     "image_url": "https://pngimg.com/uploads/dress_shirt/dress_shirt_PNG8117.png",
     "keyword": "shirt",
-    "description": "You can't go wrong with this great shirt for any occasion"
+    "description": "You can't go wrong with this great shirt"
   },
   {
     "product": "Socks",
@@ -67,6 +67,6 @@
     "inStock": 90,
     "image_url": "https://www.publicdomainpictures.net/pictures/20000/velka/sliced-bread.jpg",
     "keyword": "bread",
-    "description": "Baked with extra gluten for a flavorful and fluffy texture"
+    "description": "With extra gluten for enjoyment"
   }
 ]
