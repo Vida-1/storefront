@@ -6,12 +6,12 @@ const productSlice = createSlice({
   name: "product",
   initialState: {
     products: Products,
-    category: undefined,
+    categoryName: undefined,
     selectedProduct: undefined,
   },
   reducers: {
     setCategory: (state, action) => {
-      state.category = action.payload;
+      state.categoryName = action.payload;
     },
     showProduct: (state, action) => {
       state.selectedProduct = action.payload;
@@ -19,9 +19,9 @@ const productSlice = createSlice({
   },
 });
 
-export const filteredProducts = ({ product: { category, products } }) =>
-  category
-    ? products.filter((product) => product.type === category)
+export const filteredProducts = ({ product: { categoryName, products } }) =>
+  categoryName
+    ? products.filter((product) => product.category === categoryName)
     : products;
 
 export default productSlice;

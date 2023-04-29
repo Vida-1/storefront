@@ -1,0 +1,72 @@
+[
+  {
+    "product": "TV",
+    "category": "Electronics",
+    "categoryID": 1,
+    "price": 699.0,
+    "inStock": 5,
+    "image_url": "https://pngimg.com/uploads/tv/tv_PNG39216.png",
+    "keyword": "television",
+    "description": "A snazzy new television set"
+  },
+  {
+    "product": "Radio",
+    "category": "Electronics",
+    "categoryID": 1,
+    "price": 99.0,
+    "inStock": 15,
+    "image_url": "https://c.pxhere.com/photos/29/60/radio_receiver_radio_device_old_nostalgia_antique-1090999.jpg!d",
+    "keyword": "radio",
+    "description": "This radio generates soothing, lo-fi bliss"
+  },
+  {
+    "product": "Shirt",
+    "category": "Clothing",
+    "categoryID": 3,
+    "price": 9.0,
+    "inStock": 25,
+    "image_url": "https://pngimg.com/uploads/dress_shirt/dress_shirt_PNG8117.png",
+    "keyword": "shirt",
+    "description": "You can't go wrong with this great shirt"
+  },
+  {
+    "product": "Socks",
+    "category": "Clothing",
+    "categoryID": 3,
+    "price": 12.0,
+    "inStock": 10,
+    "image_url": "https://www.publicdomainpictures.net/pictures/240000/velka/socks-on-clothes-line.jpg",
+    "keyword": "socks",
+    "description": "Ultra-slippy floor sliding socks"
+  },
+  {
+    "product": "Apples",
+    "category": "Food",
+    "categoryID": 2,
+    "price": 0.99,
+    "inStock": 500,
+    "image_url": "https://www.publicdomainpictures.net/pictures/200000/velka/red-apple-1474016845uMq.jpg",
+    "keyword": "apples",
+    "description": "One a day keeps Aetna paperwork away"
+  },
+  {
+    "product": "Eggs",
+    "category": "Food",
+    "categoryID": 2,
+    "price": 1.99,
+    "inStock": 12,
+    "image_url": "https://www.publicdomainpictures.net/pictures/10000/velka/33-1205356775Qkde.jpg",
+    "keyword": "chocolate eggs",
+    "description": "Incredibly edible chocolate eggs"
+  },
+  {
+    "product": "Bread",
+    "category": "Food",
+    "categoryID": 2,
+    "price": 2.39,
+    "inStock": 90,
+    "image_url": "https://www.publicdomainpictures.net/pictures/20000/velka/sliced-bread.jpg",
+    "keyword": "bread",
+    "description": "With extra gluten for enjoyment"
+  }
+]
