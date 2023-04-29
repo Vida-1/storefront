@@ -2,7 +2,7 @@ import * as React from "react";
 
 import { useDispatch } from "react-redux";
 import productSlice from "../product";
-import { Select } from "@mui/material/Select";
+import { Select, MenuItem } from "@mui/material";
 
 const Category = () => {
   const dispatch = useDispatch();
@@ -23,10 +23,10 @@ const Category = () => {
         );
       }}
     >
-      <option value="">All</option>
-      <option value="Electronics">Electronics</option>
-      <option value="Food">Food</option>
-      <option value="Clothing">Clothing</option>
+      <MenuItem value="">All</MenuItem>
+      <MenuItem value="Electronics">Electronics</MenuItem>
+      <MenuItem value="Food">Food</MenuItem>
+      <MenuItem value="Clothing">Clothing</MenuItem>
     </Select>
   );
 };

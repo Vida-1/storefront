@@ -2,20 +2,25 @@ import React from "react";
 import Product from "../Product";
 import { filteredProducts } from "../../store/product";
 import { useSelector } from "react-redux";
-import { Container, Grid, Paper } from "@mui/material";
+import { Container, Grid, Card, CardContent } from "@mui/material";
 
 const Products = () => {
   const products = useSelector(filteredProducts);
   return (
-    <Container columns={{ xs: 4, md: 12 }} direction="row">
-      <Grid item md={4} xs={2}>
-        <Paper elevation={2} variant="outlined" direction="row">
-          {products.map((product) => (
-            <Product product={product} key={product.product} />
-          ))}
-        </Paper>
-      </Grid>
-    </Container>
+    <Grid item md={4} xs={2}>
+      <Container columns={{ xs: 4, md: 6 }}>
+        {products.map((product) => (
+          <>
+            <Card md={{ maxWidth: 20 }}>
+              <CardContent>
+                <p>this is some text on a card</p>
+                <Product product={product} key={product.product} />
+              </CardContent>
+            </Card>
+          </>
+        ))}
+      </Container>
+    </Grid>
   );
 };
 

@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import productSlice from "../../store/product";
 import Button from "@mui/material/Button";
@@ -18,7 +18,7 @@ const ProductModal = () => {
     >
       <article>
         <header>
-          <h2> {product?.title}</h2>
+          <h2> {product?.product}</h2>
         </header>
         <main>
           <figure>
