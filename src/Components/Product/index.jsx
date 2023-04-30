@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import { useDispatch } from "react-redux";
 import productSlice from "../../store/product";
 import React from "react";
@@ -18,12 +19,12 @@ const Product = ({product}) => {
       >
         <h2>{product.product}</h2>
         <Button
-          variant="contained"
+          variant="text"
           onClick={() => {
             dispatch(productSlice.actions.showProduct(product));
           }}
         >
-          Open
+          View Details
         </Button>
       </header>
       <main>
