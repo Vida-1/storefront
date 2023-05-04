@@ -1,6 +1,7 @@
 import { filteredProducts } from "../../store/product.js";
 import React from "react";
 import { useSelector } from "react-redux";
+import { Grid, Box} from "@mui/material";
 
 const ActiveCategory = () => {
   let categoryDescription = "";
@@ -25,10 +26,19 @@ const ActiveCategory = () => {
   }
 
   return (
-    <>
+    <Grid item md={4} xs={2}>
+      <Box
+        columns={{ xs: 4, md: 12 }}
+        direction='row'
+        align='center'
+        padding='.5em'
+        fontsize='5rem'
+        bgcolor='lightblue'>
+        
         <h1>{category}</h1>
         <p>{categoryDescription}</p>
-    </>
+      </Box>
+    </Grid>
   );
 };
 
