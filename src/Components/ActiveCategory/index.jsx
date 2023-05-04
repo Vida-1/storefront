@@ -3,11 +3,10 @@ import React from "react";
 import { useSelector } from "react-redux";
 
 const ActiveCategory = () => {
-  
   let categoryDescription = "";
-  const category = useSelector(state => state.product.categoryName);  //Attribution: E Powell helped me work out this state.product.categoryName piece!!
+  const category = useSelector((state) => state.product.categoryName); //Attribution: E Powell helped me work out this state.product.categoryName piece!!
 
-  switch (category) {
+  switch (category) {  //Attribution: Here replaced an if/else block with a switch block on suggestion of D Souther
     case "All":
       categoryDescription = "We've got what you need!";
       break;
@@ -17,7 +16,7 @@ const ActiveCategory = () => {
     case "Food":
       categoryDescription = "Nomilicous Nutrients";
       break;
-    case "Clothing":  //E Powell found the typo in here for me 
+    case "Clothing": //E Powell found the typo in here for me
       categoryDescription = "The emperor should have shopped here!";
       break;
     default:
@@ -27,8 +26,8 @@ const ActiveCategory = () => {
 
   return (
     <>
-      <h1>{category}</h1>
-      <p>{categoryDescription}</p>
+        <h1>{category}</h1>
+        <p>{categoryDescription}</p>
     </>
   );
 };
