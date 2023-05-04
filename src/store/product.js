@@ -14,7 +14,7 @@ const productSlice = createSlice({
       state.categoryName = action.payload;
     },
     showProduct: (state, action) => {
-      state.selectedProduct = action.payload;
+      state.selectedProduct = action.payload; 
     },
   },
 });

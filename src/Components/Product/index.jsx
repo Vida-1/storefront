@@ -1,10 +1,8 @@
 /* eslint-disable react/prop-types */
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import productSlice from "../../store/product";
 import React from "react";
 import Button from "@mui/material/Button";
-
-// Note: line 19 seems to be causing a bunch of eslint errors that seem related to the json file (things beingmissing in props validation)
 
 const Product = ({product}) => {
   const dispatch = useDispatch();

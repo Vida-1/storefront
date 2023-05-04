@@ -7,6 +7,7 @@ import { CardContent, Button} from "@mui/material";
 
 const Products = () => {
   const products = useSelector(filteredProducts);
+
   return (
     <Grid item md={4} xs={2}>
       <Container columns={{ xs: 4, md: 12 }} direction = 'row'>
@@ -15,7 +16,7 @@ const Products = () => {
             <Card variant ='outlined' sx={{ display: 'inline-block', margin: "1rem", maxHeight: '200', maxWidth: '200' }} >
               <CardContent align="center">
                 <Product product={product} key={product.product} />
-                  <Button variant="contained" >Add to Cart</Button>
+                <Button variant="contained"  >Add to Cart</Button>
               </CardContent>
             </Card>
           </>
