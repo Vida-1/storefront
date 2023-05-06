@@ -1,3 +1,4 @@
+import Category from "../../store/Category/index.jsx";
 import { filteredProducts } from "../../store/product.js";
 import React from "react";
 import { useSelector } from "react-redux";
@@ -26,6 +27,7 @@ const ActiveCategory = () => {
   }
 
   return (
+    <>
     <Grid item md={4} xs={2}>
       <Box
         columns={{ xs: 4, md: 12 }}
@@ -37,8 +39,10 @@ const ActiveCategory = () => {
         
         <h1>{category}</h1>
         <p>{categoryDescription}</p>
+      <Category />
       </Box>
     </Grid>
+          </>
   );
 };
 

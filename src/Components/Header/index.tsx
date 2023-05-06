@@ -1,5 +1,5 @@
 import React from "react";
-import Category from "../../store/Category";
+import CartIndicator from "../CartIndicator/CartIndicator.jsx";
 
 const Header = () => {
   return (
@@ -11,7 +11,7 @@ const Header = () => {
       }}
     >
       <h1>Welcome to the Storefront</h1>
-      <Category />
+      <CartIndicator />
     </header>
   );
 };
