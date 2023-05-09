@@ -18,7 +18,7 @@ const ActiveCategory = () => {
     case "Food":
       categoryDescription = "Nomilicous Nutrients";
       break;
-    case "Clothing": //E Powell found the typo in here for me
+    case "Clothing": //E Powell found a typo in here for me
       categoryDescription = "The emperor should have shopped here!";
       break;
     default:

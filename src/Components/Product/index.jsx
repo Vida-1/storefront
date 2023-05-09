@@ -1,11 +1,15 @@
 /* eslint-disable react/prop-types */
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import productSlice from "../../store/product";
-import React from "react";
+import React, { useState} from "react";
 import Button from "@mui/material/Button";
 
+
 const Product = ({product}) => {
+
   const dispatch = useDispatch();
+  const [itemAmt, setItemAmt] = useState(0);  // Is this is scoped correctly? It may be causing the cart inc/dec issue.
+
   return (
     <article className="Product">
       <header
@@ -30,7 +34,16 @@ const Product = ({product}) => {
           <img src={product.image_url} height={200} width={200} alt={product.keyword} />
         </figure>
         <p>{product.description}</p>
+
+
+                
       </main>
+        <p></p>
+        <Button variant="contained" onClick={()=> {setItemAmt(itemAmt + 1)}}>Add to Cart</Button>
+        <p></p>
+        <Button variant="text" onClick={() => {setItemAmt(itemAmt - 1)}}> Remove from Cart</Button>
+        <p></p>
+        <p>You have {itemAmt} of these in your cart</p>
     </article>
   );
 };
