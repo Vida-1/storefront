@@ -3,12 +3,23 @@ import { useDispatch } from "react-redux";
 import productSlice from "../../store/product";
 import React, { useState} from "react";
 import Button from "@mui/material/Button";
+import {useEffect} from "react";
+
+export let cartCounter = 0;
+
+const setCartCounter = () => {
+  cartCounter += 1;
+  console.log(`Product/index.jsx: cartCounter: ${cartCounter}`);
+};
 
 
 const Product = ({product}) => {
 
+  useEffect(() => {
+       }, [cartCounter,setCartCounter]);
+
   const dispatch = useDispatch();
-  const [itemAmt, setItemAmt] = useState(0);  // Is this is scoped correctly? It may be causing the cart inc/dec issue.
+  const [itemAmt, setItemAmt] = useState(0);  
 
   return (
     <article className="Product">
@@ -39,7 +50,7 @@ const Product = ({product}) => {
                 
       </main>
         <p></p>
-        <Button variant="contained" onClick={()=> {setItemAmt(itemAmt + 1)}}>Add to Cart</Button>
+        <Button variant="contained" onClick={()=> {setItemAmt(itemAmt + 1), setCartCounter()}}>Add to Cart</Button>
         <p></p>
         <Button variant="text" onClick={() => {setItemAmt(itemAmt - 1)}}> Remove from Cart</Button>
         <p></p>

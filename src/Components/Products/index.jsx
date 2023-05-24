@@ -6,7 +6,7 @@ import { Container, Grid, Card } from "@mui/material";
 import { CardContent} from "@mui/material";
 
 
-const Products = () => {
+const Products = (props) => {
   const products = useSelector(filteredProducts);
   
   return (
