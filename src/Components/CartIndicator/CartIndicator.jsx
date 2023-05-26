@@ -1,18 +1,18 @@
 import React from 'react';
 import { Button } from '@mui/material';
-import {cartCounter} from '../Product';
 import {useEffect} from 'react';
+import productSlice from '../../store/product';
 
 const CartIndicator = () =>{
 
-  useEffect(() => {
-    console.log (`CartIndicator cartCounter: ${cartCounter}`)
-  }, [cartCounter]);
+  // useEffect(() => {
+  //   console.log (`CartIndicator cartCounter: ${cartCounter}`)
+  // }, [cartCounter]);
 
   return (
     <>
       <Button height="24px" width="24px" >
-        Cart ({cartCounter})
+        Cart ({productSlice.cartCounter})
       </Button>
     </>
   );

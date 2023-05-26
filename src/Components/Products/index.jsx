@@ -7,7 +7,7 @@ import { CardContent} from "@mui/material";
 
 
 const Products = (props) => {
-  const products = useSelector(filteredProducts);
+  const products = useSelector(filteredProducts); 
   
   return (
     <Grid item md={4} xs={2}>
