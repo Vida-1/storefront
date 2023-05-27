@@ -2,6 +2,9 @@ import React from "react";
 import CartIndicator from "../CartIndicator/CartIndicator.jsx";
 
 const Header = () => {
+
+  // useEffect (CartIndicator), [cartCounter]
+
   return (
     <header
       style={{

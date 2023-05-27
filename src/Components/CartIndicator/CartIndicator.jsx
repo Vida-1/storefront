@@ -1,18 +1,16 @@
 import React from 'react';
 import { Button } from '@mui/material';
-import {useEffect} from 'react';
-import productSlice from '../../store/product';
+import {cartCounter} from '../../store/cartInventory';
+import {useSelector} from 'react-redux';
 
 const CartIndicator = () =>{
 
-  // useEffect(() => {
-  //   console.log (`CartIndicator cartCounter: ${cartCounter}`)
-  // }, [cartCounter]);
+  const counter = useSelector(cartCounter);
 
   return (
     <>
       <Button height="24px" width="24px" >
-        Cart ({productSlice.cartCounter})
+        Cart ({counter})
       </Button>
     </>
   );
@@ -20,8 +18,3 @@ const CartIndicator = () =>{
 };
 
 export default CartIndicator;
-
-// ** Start Here **
-//Notes:  you tell react to re-render by calling your setState function
-// so maybe add a useState hook to this component and call setCartCounter in
-// the Button?
