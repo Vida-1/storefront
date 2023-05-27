@@ -1,6 +1,8 @@
+import Category from "../../store/Category/index.jsx";
 import { filteredProducts } from "../../store/product.js";
 import React from "react";
 import { useSelector } from "react-redux";
+import { Grid, Box} from "@mui/material";
 
 const ActiveCategory = () => {
   let categoryDescription = "";
@@ -16,7 +18,7 @@ const ActiveCategory = () => {
     case "Food":
       categoryDescription = "Nomilicous Nutrients";
       break;
-    case "Clothing": //E Powell found the typo in here for me
+    case "Clothing": //E Powell found a typo in here for me
       categoryDescription = "The emperor should have shopped here!";
       break;
     default:
@@ -26,9 +28,21 @@ const ActiveCategory = () => {
 
   return (
     <>
+    <Grid item md={4} xs={2}>
+      <Box
+        columns={{ xs: 4, md: 12 }}
+        direction='row'
+        align='center'
+        padding='.5em'
+        fontsize='5rem'
+        bgcolor='lightblue'>
+        
         <h1>{category}</h1>
         <p>{categoryDescription}</p>
-    </>
+      <Category />
+      </Box>
+    </Grid>
+          </>
   );
 };
 

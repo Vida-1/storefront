@@ -8,6 +8,7 @@ const productSlice = createSlice({
     products: Products,
     categoryName: undefined,
     selectedProduct: undefined,
+    numberInCart: 0, 
   },
   reducers: {
     setCategory: (state, action) => {
@@ -16,6 +17,16 @@ const productSlice = createSlice({
     showProduct: (state, action) => {
       state.selectedProduct = action.payload; 
     },
+    setNumberInCartReducer: (state, action) => { 
+      state.numberInCart=action.payload;
+    },
+    increaseNumberInCartReducer: (state, action) => { 
+      state.numberInCart=action.payload;
+    },
+    decreaseNumberInCartReducer: (state, action) => { 
+      state.numberInCart=action.payload;
+    }   
+
   },
 });
 
