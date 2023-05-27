@@ -3,7 +3,7 @@ import cartInventorySlice from "../../store/cartInventory";
 import {cartArray} from '../../store/cartInventory';
 import {useSelector} from 'react-redux';
 
-const SimpleCart = () => {  // Attribution: logic help received from my sister!
+const SimpleCart = () => {  // Attribution: logic help received from my sister and https://www.programiz.com/javascript/library/array/reduce
     
     const array = useSelector(cartArray);
 
@@ -24,8 +24,13 @@ const SimpleCart = () => {  // Attribution: logic help received from my sister!
     const aggregateArray = array.reduce(aggregateArrayBuilder, []);
 
  //   const contents = array.map((item,index) => <li key={index}>{item}</li>);  //Attribution: https://scrimba.com/articles/react-list-array-with-map-function/
-  const contents = aggregateArray.map((item,index) => <li key={index}>{item}</li>);  //Attribution: https://scrimba.com/articles/react-list-array-with-map-function/
-    
+//   const contents = aggregateArray.map((item,index) => <li key={index}>{item}</li>);  //Attribution: https://scrimba.com/articles/react-list-array-with-map-function/
+
+    const contents = aggregateArray.map((item,index) => {
+        let itemCount = array.filter(thing => thing === item).length; //attribution: https://stackoverflow.com/questions/37365512/count-the-number-of-times-a-same-value-appears-in-a-javascript-array
+
+        return <li key={index}>{item} x {itemCount}</li>});  
+
     return (
         <>
           <ul>
