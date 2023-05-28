@@ -10,7 +10,8 @@
 <!-- - [back-end server url](http://xyz.com) (when applicable) -->
 - [front-end application](http://xyz.com) (when applicable)
 - [Reading Notes 36 -Topic](https://vida-1.github.io/reading-notes/read36_401.html)
-- 
+- [App Diagram](/lab38_Diagram.jpg)
+
 ### Setup
 
 #### `.env` requirements (where applicable)

@@ -1,5 +1,4 @@
 import React from 'react';
-import cartInventorySlice from "../../store/cartInventory";
 import {cartArray} from '../../store/cartInventory';
 import {useSelector} from 'react-redux';
 
@@ -23,7 +22,7 @@ const SimpleCart = () => {  // Attribution: logic help received from my sister a
 
     const aggregateArray = array.reduce(aggregateArrayBuilder, []);
 
- //   const contents = array.map((item,index) => <li key={index}>{item}</li>);  //Attribution: https://scrimba.com/articles/react-list-array-with-map-function/
+//   const contents = array.map((item,index) => <li key={index}>{item}</li>);  //Attribution: https://scrimba.com/articles/react-list-array-with-map-function/
 //   const contents = aggregateArray.map((item,index) => <li key={index}>{item}</li>);  //Attribution: https://scrimba.com/articles/react-list-array-with-map-function/
 
     const contents = aggregateArray.map((item,index) => {
