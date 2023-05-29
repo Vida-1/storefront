@@ -5,25 +5,24 @@ import ActiveCategory from "./Components/ActiveCategory";
 import Products from "./Components/Products";
 import ProductModal from "./Components/ProductModal";
 import SimpleCart from "./Components/SimpleCart/SimpleCart";
-
-import {useSelector, useDispatch} from "react-redux";
-import loadProducts from "./store/products";
 import {useEffect} from 'react';
+import { loadProducts } from "../../store/products.js";
+import {useSelector, useDispatch} from "react-redux";
 
 function App() {
 
-  const products = useSelector(({products}) => products);
   const dispatch = useDispatch();
-
-  useEffect(() => {
-  dispatch(loadProducts());
-  },[]);
+  
+  useEffect(() => {dispatch(loadProducts())},[]);
+  
+  const { products } = useSelector(({products}) => products);
+  console.log(`This is the products.length: ${products.length}`);
 
   return (
     <>
-    <div>Products: {products.length}</div>;
       <Header />
       <SimpleCart />
+      <div>Products: {products.length}</div>;
       <ActiveCategory />
       <Products />
       <Footer />
@@ -33,15 +32,3 @@ function App() {
 }
 
 export default App;
-
-// const { products } = useSelector(({products}) => products);
-// const dispatch = useDispatch();
-
-// useEffect(() => {
-// dispatch(loadProducts());
-// },[]);
-
-// return <div>Products: {products.length}</div>;
-// }
-
-// export default App;
