@@ -3,7 +3,7 @@ import CartIndicator from "../CartIndicator/CartIndicator.jsx";
 
 const Header = () => {
 
-  // useEffect (CartIndicator), [cartCounter]
+// useEffect (CartIndicator), [cartCounter]
 
   return (
     <header

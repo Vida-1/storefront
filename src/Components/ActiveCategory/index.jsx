@@ -1,12 +1,12 @@
 import Category from "../../store/Category/index.jsx";
-import { filteredProducts } from "../../store/product.js";
 import React from "react";
 import { useSelector } from "react-redux";
 import { Grid, Box} from "@mui/material";
 
+
 const ActiveCategory = () => {
   let categoryDescription = "";
-  const category = useSelector((state) => state.product.categoryName); //Attribution: E Powell helped me work out this state.product.categoryName piece!!
+  const category = useSelector((state) => state.product.categoryName); //Attribution: my sister helped me work out this state.product.categoryName piece
 
   switch (category) {  //Attribution: Here replaced an if/else block with a switch block on suggestion of D Souther
     case "All":

@@ -2,13 +2,13 @@
 import { useDispatch} from "react-redux";
 import productSlice from "../../store/product";
 import cartInventorySlice from "../../store/cartInventory";
-import React, { useState} from "react";
+import React from "react";
 import Button from "@mui/material/Button";
 
 const Product = ({product}) => {
   const dispatch = useDispatch();
 
-  const [itemAmt, setItemAmt] = useState(0);  
+  // const [itemAmt, setItemAmt] = useState(0);  
 
   return (
     <article className="Product">
@@ -41,8 +41,6 @@ const Product = ({product}) => {
         <Button variant="contained" onClick={()=>{dispatch(cartInventorySlice.actions.setAddToCart(product.product))}}>Add to Cart</Button>
         <p></p>
         <Button variant="text" onClick={()=>{dispatch(cartInventorySlice.actions.setRemoveFromCart(product.product))}}> Remove From Cart</Button>
-        <p></p>
-        <p>You have {itemAmt} of these in your cart</p>
     </article>
   );
 };
