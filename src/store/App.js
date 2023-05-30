@@ -1,7 +1,7 @@
 import React from 'react';
 import {useEffect} from 'react';
 import {useSelector, useDispatch} from 'react-redux';
-import {loadProducts, updateProduct} from "./products";
+import {loadProducts, updateProduct} from "./products_test";
 
 function App() {
     const { products } = useSelector(({products}) => products);

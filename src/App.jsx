@@ -6,23 +6,22 @@ import Products from "./Components/Products";
 import ProductModal from "./Components/ProductModal";
 import SimpleCart from "./Components/SimpleCart/SimpleCart";
 import {useEffect} from 'react';
-import { loadProducts } from "../../store/products.js";
-import {useSelector, useDispatch} from "react-redux";
+import {useDispatch, useSelector} from 'react-redux';
+import {loadProducts} from "./store/product";
 
-function App() {
+const App=()=>{
 
-  const dispatch = useDispatch();
-  
-  useEffect(() => {dispatch(loadProducts())},[]);
-  
-  const { products } = useSelector(({products}) => products);
-  console.log(`This is the products.length: ${products.length}`);
+// const {products} = useSelector(({products}) => products); //from demo
+ const products = useSelector((state) => state.product.products); //easier to read version attribution: sister helped make this understandable
+ const dispatch = useDispatch();
+ useEffect(() => {dispatch(loadProducts())},[]);
+    
+   console.log(`This is the products.length: ${products.length}`);
 
   return (
     <>
       <Header />
       <SimpleCart />
-      <div>Products: {products.length}</div>;
       <ActiveCategory />
       <Products />
       <Footer />
