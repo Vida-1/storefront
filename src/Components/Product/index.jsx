@@ -1,16 +1,40 @@
 /* eslint-disable react/prop-types */
-import { useDispatch} from "react-redux";
+import { useDispatch, useSelector} from "react-redux";
 import productSlice from "../../store/product";
 import cartInventorySlice from "../../store/cartInventory";
 import React from "react";
 import Button from "@mui/material/Button";
+import {updateProduct} from "../../store/product";
+import { useState } from "react";
 
 const Product = ({product}) => {
   const dispatch = useDispatch();
 
-  // const [itemAmt, setItemAmt] = useState(0);  
+  const products = useSelector((state) => state.product.products);
 
+  const add = () => {dispatch(cartInventorySlice.actions.setAddToCart(product.product))};
+  const remove = () => {dispatch(cartInventorySlice.actions.setRemoveFromCart(product.product))};
+
+  const doUpdateProduct = () => {
+    dispatch(updateProduct(products[0], 1 ));                              
+   console.log(`${products} stockAmount should now be updated by ${1}`);
+  }
+  const [itemAmt, setItemAmt] = useState(0);  
+
+  const buttonAdd =() => {
+    add();
+    doUpdateProduct()
+
+  };
+
+    const buttonRemove =() => {
+      remove()
+      doUpdateProduct()
+    
+  };
+    
   return (
+    <>
     <article className="Product">
       <header
         style={{
@@ -38,10 +62,12 @@ const Product = ({product}) => {
       </main>
         <p></p>
         {/* <Button variant="contained" onClick={()=> {setItemAmt(itemAmt + 1), setCartCounter()}}>Add to Cart</Button> */}
-        <Button variant="contained" onClick={()=>{dispatch(cartInventorySlice.actions.setAddToCart(product.product))}}>Add to Cart</Button>
+        
+        <Button variant="contained" onClick={[add, doUpdateProduct(products, 1)]}>Add to Cart</Button>
         <p></p>
-        <Button variant="text" onClick={()=>{dispatch(cartInventorySlice.actions.setRemoveFromCart(product.product))}}> Remove From Cart</Button>
+        <Button variant="text" onClick={[remove, doUpdateProduct(products, -1)]}> Remove From Cart</Button>
     </article>
+    </>
   );
 };
 

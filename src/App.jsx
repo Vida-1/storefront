@@ -11,12 +11,16 @@ import {loadProducts} from "./store/product";
 
 const App=()=>{
 
-// const {products} = useSelector(({products}) => products); //from demo
- const products = useSelector((state) => state.product.products); //easier to read version attribution: sister helped make this understandable
- const dispatch = useDispatch();
- useEffect(() => {dispatch(loadProducts())},[]);
-    
-   console.log(`This is the products.length: ${products.length}`);
+  const products = useSelector((state) => state.product.products); //easier to read version of demo code. Attribution: sister helped make this more understandable to me.
+  const dispatch = useDispatch();
+
+  // const doUpdateProduct = () => {
+  //   dispatch(updateProduct({products}, -2 ));   //hardcoded arguments.
+  //   console.log(`${products} stockAmount should now be decreased by 2`);
+  // }
+  
+  useEffect(() => {dispatch(loadProducts())},[]);
+  // console.log(`This is the products.length: ${products.length}`);
 
   return (
     <>
